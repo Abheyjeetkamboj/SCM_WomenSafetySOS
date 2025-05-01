@@ -2,52 +2,67 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 .footer-container {
     background-color: #4c1d95;
-    color: white;
+    color: #ffffff;
     margin-top: 100px;
-    width: 100%; 
-    overflow: hidden; 
+    width: 100%;
+    overflow: hidden;
+    padding: 3rem 1rem;
 }
 
 .max-w-7xl {
-    max-width: 100%; 
+    max-width: 1280px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    margin: 0 auto;
 }
 
 .grid {
     display: grid;
+    gap: 2rem;
 }
 
 .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (min-width: 768px) {
+    .grid-cols-md-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-container {
+        padding: 4rem 2rem;
+    }
 }
 
-.gap-8 {
-    gap: 2rem;
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 2rem 1rem;
+    }
+
+    .max-w-7xl {
+        padding: 0 10px;
+    }
+
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .grid {
+        gap: 1rem;
+    }
 }
 
 .flex {
@@ -67,7 +82,8 @@ body {
 }
 
 .hover\:text-white:hover {
-    color: white;
+    color: #ffffff;
+    transition: color 0.3s ease;
 }
 
 .space-y-2 > * + * {
@@ -82,49 +98,22 @@ body {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .md\:grid-cols-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-    
-    .px-4 {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+a {
+    color: #e9d5ff;
+    text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .grid-cols-1 {
-        grid-template-columns: 1fr;
-    }
-
-    .max-w-7xl {
-        padding: 0 10px;
-    }
-
-    .px-4 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .py-12 {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
+a:hover {
+    color: #ffffff;
 }
 
-@media (max-width: 480px) {
-    .gap-8 {
-        gap: 1rem;
-    }
+.footer-heading {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
 
-    .px-4 {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
-    .py-12 {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
+.footer-link {
+    font-size: 0.95rem;
+    display: block;
 }
