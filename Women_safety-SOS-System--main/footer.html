@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Footer</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="footer.css">
-
+    <link rel="stylesheet" href="footer.css" />
 </head>
 <body>
     <footer class="footer-container">
         <div class="max-w-7xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 grid-cols-md-4 gap-8">
+                <!-- Brand and Mission -->
                 <div>
                     <div class="flex items-center mb-4">
-                        <i data-lucide="shield" class="h-8 w-8 text-purple-300"></i>
+                        <i data-lucide="shield" class="h-8 w-8 text-purple-300" aria-hidden="true"></i>
                         <span class="ml-2 text-xl font-bold">Guardian Angel</span>
                     </div>
                     <p class="text-purple-200 text-sm">
                         Empowering women with safety technology that provides peace of mind and immediate assistance in times of need.
                     </p>
                 </div>
-                
+
+                <!-- Quick Links -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <h3 class="footer-heading">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="home.html" class="text-purple-200 hover:text-white">Home</a></li>
-                        <li><a href="about.html" class="text-purple-200 hover:text-white">About Us</a></li>
-                        <li><a href="community.html" class="text-purple-200 hover:text-white">community</a></li>
-                        <li><a href="contact.html" class="text-purple-200 hover:text-white">Contact</a></li>
+                        <li><a href="home.html" class="footer-link hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="footer-link hover:text-white">About Us</a></li>
+                        <li><a href="community.html" class="footer-link hover:text-white">Community</a></li>
+                        <li><a href="contact.html" class="footer-link hover:text-white">Contact</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Features -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Features</h3>
+                    <h3 class="footer-heading">Features</h3>
                     <ul class="space-y-2">
-                        <li><span class="text-purple-200">SOS Alert System</span></li>
-                        <li><span class="text-purple-200">Real-time Location Tracking</span></li>
-                        <li><span class="text-purple-200">Silent Mode Alerts</span></li>
-                        <li><span class="text-purple-200">Emergency Services Integration</span></li>
+                        <li><span class="footer-link">SOS Alert System</span></li>
+                        <li><span class="footer-link">Real-time Location Tracking</span></li>
+                        <li><span class="footer-link">Silent Mode Alerts</span></li>
+                        <li><span class="footer-link">Emergency Services Integration</span></li>
                     </ul>
                 </div>
-                
+
+                <!-- Contact Info -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <h3 class="footer-heading">Contact Us</h3>
                     <ul class="space-y-2">
                         <li class="flex items-center">
-                            <i data-lucide="mail" class="h-5 w-5 mr-2 text-purple-300"></i>
-                            <span class="text-purple-200">info@guardiaangel.com</span>
+                            <i data-lucide="mail" class="h-5 w-5 mr-2 text-purple-300" aria-hidden="true"></i>
+                            <a href="mailto:info@guardiaangel.com" class="footer-link hover:text-white">info@guardiaangel.com</a>
                         </li>
                         <li class="flex items-center">
-                            <i data-lucide="phone" class="h-5 w-5 mr-2 text-purple-300"></i>
-                            <span class="text-purple-200">+1 (800) 123-4567</span>
+                            <i data-lucide="phone" class="h-5 w-5 mr-2 text-purple-300" aria-hidden="true"></i>
+                            <a href="tel:+18001234567" class="footer-link hover:text-white">+1 (800) 123-4567</a>
                         </li>
                         <li class="flex items-center">
-                            <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-purple-300"></i>
-                            <span class="text-purple-200">New Delhi, India</span>
+                            <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-purple-300" aria-hidden="true"></i>
+                            <span class="footer-link">New Delhi, India</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            
+
+            <!-- Bottom Note -->
             <div class="border-t border-purple-800 mt-8 pt-8 text-center text-purple-300 text-sm">
                 <p>&copy; <span id="current-year"></span> Guardian Angel. All rights reserved.</p>
                 <p class="mt-2">
@@ -70,6 +74,10 @@
         </div>
     </footer>
 
-    <script src="footer.js"></script>
+    <script>
+        // Set current year automatically
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+        lucide.createIcons(); // Load Lucide icons
+    </script>
 </body>
 </html>
