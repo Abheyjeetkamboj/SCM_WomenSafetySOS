@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-wrap: break-word;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    margin-top: 60px;
+    background: #4c1d95;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-cards {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: white;
+    padding: clamp(15px, 4vw, 20px);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-card svg {
+    width: clamp(32px, 8vw, 36px);
+    height: clamp(32px, 8vw, 36px);
+    margin-bottom: 20px;
+    color: #6d28d9;
+}
+
+.form-section {
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-section {
+    padding-right: 40px;
+}
+
+.faq-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 30px;
+    color: #1f2937;
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-item h3 {
+    color: #4c1d95;
+    margin-bottom: 10px;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    background: #6d28d9;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+button:hover {
+    background: #5b21b6;
+}
+
+@media (max-width: 768px) {
+    .contact-cards,
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-section {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero {
+        padding: 40px 15px;
+    }
+    
+    .hero h1 {
+        font-size: clamp(1.6rem, 4vw, 1.8rem);
+    }
+    
+    .hero p {
+        font-size: clamp(0.85rem, 3vw, 1rem);
+        padding: 0 10px;
+    }
+    
+    .contact-card {
+        padding: 20px;
+    }
+    
+    .contact-form {
+        padding: 30px;
+    }
+    
+    input, select, textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 10px;
+        margin-top: 40px;
+    }
+    
+    .hero h1 {
+        font-size: clamp(1.4rem, 4vw, 1.5rem);
+    }
+    
+    .hero p {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+        line-height: 1.5;
+    }
+    
+    .contact-cards {
+        padding: 40px 10px;
+        gap: 20px;
+    }
+    
+    .contact-card {
+        padding: 15px;
+    }
+    
+    .contact-card svg {
+        width: clamp(28px, 7vw, 32px);
+        height: clamp(28px, 7vw, 32px);
+    }
+    
+    .form-container {
+        padding: 40px 10px;
+        gap: 20px;
+    }
+    
+    .faq-section h2 {
+        font-size: clamp(1.3rem, 4vw, 1.5rem);
+    }
+    
+    .faq-item h3 {
+        font-size: clamp(0.85rem, 3vw, 1rem);
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    input, select, textarea {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+    
+    button {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+}

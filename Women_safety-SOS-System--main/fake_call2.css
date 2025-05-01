@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.phone-frame {
+    width: 360px;
+    height: 650px;
+    background: #1E1E1E;
+    border-radius: 30px;
+    border: 8px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.status-bar {
+    width: 100%;
+    height: 40px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 14px;
+    color: white;
+}
+
+.time {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.icons {
+    display: flex;
+    gap: 5px;
+}
+
+.speaker-notch {
+    width: 80px;
+    height: 8px;
+    background: black;
+    border-radius: 10px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.call-screen {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile {
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+h6 {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.button {
+    background: #333;
+    padding: 15px;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button span {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.end-call {
+    background: red;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    margin: 50px auto 0;
+    cursor: pointer;
+}

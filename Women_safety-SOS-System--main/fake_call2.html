@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Call</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="fake_call2.css">
+</head>
+<body>
+    <script>
+        // Reset the call status when on this page
+        localStorage.removeItem("callAnswered");
+    </script>
+
+    <div class="phone-frame">
+        <div class="status-bar">
+            <span class="time">9:41 AM</span>
+            <span class="icons">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-full"></i>
+            </span>
+        </div>
+        <div class="call-screen">
+            <div class="profile">
+                <h2>+91 75057 61152</h2>
+                <h6>+91 750761152 Uttar Pradesh (East) Mobile</h6>
+            </div>
+            <p>HD 1:05</p>
+            <div class="buttons">
+                <div class="button"><i class="fa-solid fa-keyboard"></i><span>Keypad</span></div>
+                <div class="button"><i class="fa-solid fa-microphone-slash"></i><span>Mute</span></div>
+                <div class="button"><i class="fa-solid fa-volume-high"></i><span>Speaker</span></div>
+                <div class="button"><i class="fa-solid fa-ellipsis"></i><span>More</span></div>
+            </div>
+            <div class="end-call">
+                <a href="/dashboard.html"><i class="fa-solid fa-phone-slash"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

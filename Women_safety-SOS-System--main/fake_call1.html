@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeCall</title>
+    <link rel="stylesheet" href="fake_call1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <audio id="ringtone" src="iphone_ringtone.mp3" preload="auto"></audio>
+
+    <script>
+        let ringtone = document.getElementById("ringtone");
+
+        window.onload = function() {
+            if (!localStorage.getItem("callAnswered")) {
+                ringtone.play().catch(error => console.log("Autoplay blocked: " + error));
+            }
+        };
+
+        function stopRingtone() {
+            ringtone.pause();
+            ringtone.currentTime = 0;
+            localStorage.setItem("callAnswered", "true"); // Mark call as answered
+        }
+    </script>
+
+    <div class="phone-frame">
+        <div class="notch">
+            <div class="status-bar">
+                <span class="time">10:15</span>
+                <span class="icons">
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-three-quarters"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="call-screen">
+            <div class="caller-info">
+                <h2>+91 75057 61152</h2>
+                <h6>Uttar Pradesh (East) Mobile Telephony</h6>
+                <p>Incoming Call...</p>
+            </div>
+
+            <div class="avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="buttons">
+                <a href="dashboard.html" class="decline"><i class="fa-solid fa-phone-slash"></i></a>
+                <a href="fake_call2.html" class="answer" onclick="stopRingtone()">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
