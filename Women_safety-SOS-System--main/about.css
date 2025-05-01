@@ -3,10 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    /* Temporary debug: outline elements to spot overflow */
-    /* Uncomment to debug: * { outline: 1px solid red; } */
-    /* Comment out after testing */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -398,7 +395,7 @@ p {
         font-size: 0.9rem;
     }
 }
-// make responsive for mobile
+/*  make responsive for mobile */
 @media (max-width: 320px) {
     .hero-content h1 {
         font-size: 1.5rem;
