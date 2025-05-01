@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error('Lottie animation failed to load:', error);
             if (fallbackImage) {
-                fallbackImage.style.display = 'block';
+                fallbackImage.style.display = 'block'; 
                 animationContainer.style.display = 'none';
             }
         }
